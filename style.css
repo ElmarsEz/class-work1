@@ -360,6 +360,22 @@ input[type="radio"] {
     color: #999999;
 }
 
+.author-link {
+    color: #b30000;
+    text-decoration: none;
+}
+
+.author-link:visited {
+    color: #b30000;
+}
+
+.author-link:hover {
+    color: #ff0000;
+
+    text-shadow:
+        0 0 5px #ff0000,
+        0 0 10px #660000;
+}
 
 /* =========================
    FOOTER
@@ -376,4 +392,38 @@ footer {
 
     color: #666666;
 }
-```
+
+.skull {
+    position: fixed;
+
+    top: 50%;
+
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
+
+    border: 2px solid #550000;
+
+    box-shadow:
+        0 0 15px #000000,
+        0 0 20px #660000;
+}
+
+
+/* LEFT SKULL */
+
+.skull-left {
+    left: 30px;
+}
+
+
+/* RIGHT SKULL */
+
+.skull-right {
+    right: 30px;
+}
