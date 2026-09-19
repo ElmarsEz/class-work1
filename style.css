@@ -1,12 +1,16 @@
 @font-face {
     font-family: "October Crow";
-    src: url("fonts/october-crow.regular.ttf") format("truetype");
+    src: url("october-crow.regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
-body {
 
+/* =========================
+   PAGE
+   ========================= */
+
+body {
     margin: 0;
     padding: 40px 0;
 
@@ -17,19 +21,16 @@ body {
     background-attachment: fixed;
 
     font-family: "October Crow", serif;
-    color: black;
+    color: #d0d0d0;
 }
 
 
 .container {
     width: 720px;
     margin: 0 auto;
-
     padding: 30px;
 
-    background-color: rgba(10, 0, 0, 0.90);
-
-    color: #d0d0d0;
+    background-color: rgba(10, 0, 0, 0.9);
 
     border: 2px solid #550000;
 
@@ -39,12 +40,13 @@ body {
 }
 
 
-/* title */
+/* =========================
+   HEADER
+   ========================= */
 
 h1 {
     margin: 0;
 
-    font-family: "October Crow", serif;
     font-size: 42px;
     text-align: center;
 
@@ -55,7 +57,8 @@ h1 {
         0 0 10px #660000;
 }
 
-h2 {
+
+header h2 {
     margin-top: 8px;
     margin-bottom: 25px;
 
@@ -71,120 +74,34 @@ h2 {
 }
 
 
-/* share links */
-
-nav {
-    margin-top: 20px;
-    margin-bottom: 25px;
-
-    line-height: 1.8;
-}
-
-
-nav a {
-    display: block;
-
-    color: #0000ee;
-    text-decoration: underline;
-}
-
-
-nav a:visited {
-    color: #551a8b;
-}
-
-
-nav a:hover {
-    color: red;
-}
-
-
-/* author */
-
-.author {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-
-    margin: 25px 0;
-    padding: 15px;
-
-    background-color: rgba(0, 0, 0, 0.65);
-
-    border: 1px solid #550000;
-
-    box-shadow:
-        inset 0 0 15px #000000,
-        0 0 10px rgba(120, 0, 0, 0.4);
-}
-
-.author-photo {
-    width: 130px;
-    height: 160px;
-
-    object-fit: cover;
-
-    border: 3px solid #300000;
-
-    box-shadow:
-        0 0 8px #000000,
-        0 0 12px #660000;
-
-    filter: grayscale(70%) contrast(120%) brightness(75%);
-}
-
-.author-info h2 {
-    margin: 0 0 8px 0;
-
-    font-family: "October Crow", serif;
-    font-size: 28px;
-
-    color: #b30000;
-
-    text-shadow:
-        0 0 4px #000000,
-        0 0 8px #660000;
-}
-
-.author-info p {
-    margin: 0;
-
-    color: #999999;
-
-    font-size: 17px;
-}
-
-
-.author h2 {
-    margin-bottom: 5px;
-}
-
-
-.author p {
-    margin-top: 0;
-
-    color: #555;
-}
-
-
-/* hide radio buttons */
+/* =========================
+   HIDDEN RADIO BUTTONS
+   ========================= */
 
 input[type="radio"] {
     display: none;
 }
 
 
-/* poem area */
+/* =========================
+   POEM
+   ========================= */
 
 .poem-container {
     max-width: 600px;
+
     margin: 30px auto 0;
     padding: 30px;
 
     background-color: rgba(0, 0, 0, 0.65);
 
     border: 1px solid #500000;
+
+    box-shadow:
+        inset 0 0 20px #000000,
+        0 0 10px rgba(100, 0, 0, 0.3);
 }
+
 
 .poem {
     display: none;
@@ -192,13 +109,13 @@ input[type="radio"] {
     font-size: 19px;
     line-height: 1.7;
 
-    color: #d0d0d0;
-
     text-align: center;
+
+    color: #d0d0d0;
 }
 
 
-/* poem pages */
+/* POEM PAGES */
 
 #text1:checked ~ .poem-container .poem-1 {
     display: block;
@@ -213,7 +130,9 @@ input[type="radio"] {
 }
 
 
-/* navigation */
+/* =========================
+   PAGE NAVIGATION
+   ========================= */
 
 .nav {
     display: none;
@@ -236,7 +155,7 @@ input[type="radio"] {
 }
 
 
-/* buttons */
+/* PREVIOUS / NEXT BUTTONS */
 
 .navigation label {
     padding: 8px 16px;
@@ -266,6 +185,7 @@ input[type="radio"] {
     transition: 0.2s;
 }
 
+
 .navigation label:hover {
     background: linear-gradient(
         to bottom,
@@ -287,6 +207,7 @@ input[type="radio"] {
         0 0 10px #ff0000;
 }
 
+
 .navigation label:active {
     background: #000000;
 
@@ -299,53 +220,9 @@ input[type="radio"] {
 }
 
 
-/* footer */
-
-footer {
-    margin-top: 30px;
-    padding-top: 15px;
-
-    border-top: 1px solid #888;
-
-    font-size: 13px;
-    color: #555;
-}
-
-/* SHARE LINKS */
-
-nav a {
-    display: block;
-
-    color: #8b0000;
-    text-decoration: none;
-
-    font-weight: bold;
-
-    padding: 4px 8px;
-    margin: 3px 0;
-
-    border-left: 3px solid #8b0000;
-
-    transition: 0.2s;
-}
-
-nav a:visited {
-    color: #8b0000;
-}
-
-nav a:hover {
-    color: #ff0000;
-
-    background-color: #0a0a0a;
-
-    border-left: 3px solid #ff0000;
-
-    text-shadow:
-        0 0 4px #ff0000,
-        0 0 8px #8b0000;
-
-    padding-left: 14px;
-}
+/* =========================
+   BOTTOM SECTION
+   ========================= */
 
 .bottom-info {
     display: flex;
@@ -361,11 +238,15 @@ nav a:hover {
 }
 
 
-/* LEFT SIDE */
+/* =========================
+   SHARE MENU
+   ========================= */
 
 .share-menu {
     width: 45%;
+    margin: 0;
 }
+
 
 .share-menu a {
     display: block;
@@ -385,9 +266,11 @@ nav a:hover {
     transition: 0.2s;
 }
 
+
 .share-menu a:visited {
     color: #b30000;
 }
+
 
 .share-menu a:hover {
     color: #ff3333;
@@ -407,7 +290,9 @@ nav a:hover {
 }
 
 
-/* RIGHT SIDE */
+/* =========================
+   AUTHOR
+   ========================= */
 
 .author {
     width: 45%;
@@ -415,14 +300,19 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
 
+    margin: 0;
     padding: 16px;
 
     background-color: rgba(0, 0, 0, 0.5);
 
     border: 1px solid #440000;
+
+    box-shadow:
+        inset 0 0 15px #000000,
+        0 0 10px rgba(120, 0, 0, 0.4);
 }
+
 
 .author-photo {
     width: 180px;
@@ -432,32 +322,58 @@ nav a:hover {
 
     border: 2px solid #550000;
 
-    filter: grayscale(80%) contrast(130%) brightness(70%);
+    filter:
+        grayscale(80%)
+        contrast(130%)
+        brightness(70%);
 
     box-shadow:
         0 0 10px #000000,
         0 0 10px #550000;
 }
 
+
 .author-info {
     margin-top: 14px;
+
     text-align: center;
 }
+
 
 .author-info h3 {
     margin: 0 0 8px 0;
 
-    font-family: "October Crow", serif;
     font-size: 28px;
 
     color: #b30000;
 
-    text-shadow: 0 0 5px #550000;
+    text-shadow:
+        0 0 5px #550000;
 }
+
 
 .author-info p {
     margin: 0;
 
-    color: #999999;
     font-size: 18px;
+
+    color: #999999;
 }
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    margin-top: 30px;
+    padding-top: 15px;
+
+    border-top: 1px solid #550000;
+
+    font-size: 13px;
+    text-align: center;
+
+    color: #666666;
+}
+```
